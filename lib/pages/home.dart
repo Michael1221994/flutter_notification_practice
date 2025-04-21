@@ -10,9 +10,7 @@ class Home extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () async{
-            final notiService = NotiService();
-            await notiService.initNotification();
-            notiService.showNotification(
+            await NotiService().showNotification(
               title: "Title",
               body: "body"
             );

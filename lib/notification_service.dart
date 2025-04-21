@@ -35,7 +35,7 @@ class NotiService {
 
     //initialize the plugin
     await notificationsPlugin.initialize(initSettings);
-    
+    _isIinitialized = true;
   }
 
   //Notification details setup
@@ -56,7 +56,7 @@ class NotiService {
     String? title,
     String? body,
   }) async {
-    return notificationsPlugin.show(id, title, body,  notificationDetails(),);  }
+    return notificationsPlugin.show(id, title, body,  notificationDetails());  }
 
   // on notification Tap
 }
